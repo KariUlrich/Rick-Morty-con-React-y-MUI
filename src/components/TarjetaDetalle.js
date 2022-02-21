@@ -3,11 +3,11 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 
-const TarjetaDetalle = ({imagen, nombre, especie, estado, creado, locacion}) => {
+const TarjetaDetalle = ({imagen, nombre, especie, estado, creado, locacion, origen}) => {
 
     return(
         <div>
-            <Card  sx={{m: 3, width: 300 }}>
+            <Card  sx={{m: 3, width: 350 }}>
              <CardMedia
               component="img"
               height="300"
@@ -25,10 +25,7 @@ const TarjetaDetalle = ({imagen, nombre, especie, estado, creado, locacion}) => 
              {estado}
              </Typography>
              <Typography variant="body2" color="text.secondary">
-             date of creation: {creado}
-             </Typography>
-             <Typography variant="body2" color="text.secondary">
-             {locacion}
+             www:{origen}
              </Typography>
             </CardContent>
             </Card>

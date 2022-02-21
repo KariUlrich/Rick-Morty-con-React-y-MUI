@@ -22,9 +22,8 @@ const DetallePersonaje = () => {
         imagen= {personaje.image}
         nombre= {personaje.name}
         especie= {personaje.species}
-        estado= {personaje.status}
-        creado= {personaje.created}
-        locacion= {personaje.location}    
+        estado= {personaje.status}  
+        origen= {personaje.url}
        />
     )
 }
