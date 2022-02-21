@@ -1,6 +1,7 @@
 import {useEffect, useState } from "react"
 import{useParams} from "react-router-dom"
 import TarjetaDetalle from "./TarjetaDetalle";
+import Box from '@mui/material/Box';
 
 const DetallePersonaje = () => {
 
@@ -14,17 +15,20 @@ const DetallePersonaje = () => {
            setPersonaje(data)
         }))
        
-    }, [])
+    }, [params.idPersonaje])
     
 
     return (
+        <Box sx={{ display: 'flex', justifyContent: 'center'}}>
         <TarjetaDetalle key={personaje.id}
         imagen= {personaje.image}
         nombre= {personaje.name}
         especie= {personaje.species}
         estado= {personaje.status}  
-        origen= {personaje.url}
+        locacion= {personaje?.location?.name}
+        origen= {personaje?.origin?.name}
        />
+       </Box>
     )
 }
 
